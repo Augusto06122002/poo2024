@@ -1,12 +1,12 @@
 import re
 class caja_ahorro:
-    __nroCuenta: str 
+    __nrocuenta: str 
     __cuil:str
     __apellido:str
     __saldo:float   
     __nombre:str
-    def __init__(self,nroCuenta,cuil,nombre,apellido,saldo):
-        self.__nrocuenta = nroCuenta
+    def __init__(self,nrocuenta,cuil,nombre,apellido,saldo):
+        self.__nrocuenta = nrocuenta
         self.__cuil = cuil
         self.__apellido = apellido
         self.__saldo = saldo
@@ -22,17 +22,15 @@ class caja_ahorro:
             self.__saldo -= importe
             print(f'saldo total con la extraccion:$ {self.__saldo}')
         else:
-            print('saldo insuficiente ')
             return -1
     def depositar(self,valorD):
         if valorD > 0:
             self.__saldo += valorD
-            print('saldo total con deposito: {self.__saldo}')
         else:
             print('ingrese un numero positivo: ')
     def validarCUIL(self):
         pattern = r'^\d{2}-\d{8}-\d$'
-        if re.match(pattern, self.__cuil):
+        if re.match(pattern, self.__cuil):#re.match(evalua si el cuil ingresado cumple el patron que deberia tener XY – 12345678 – Z)coinciden=true
             print("CUIL válido.")
             return True
         else:
