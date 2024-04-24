@@ -1,0 +1,31 @@
+patente,pedido,comidas,tiempo_estimado,tiempo_real,precio
+ABC123,1,Hamburguesa,20,25,100
+DEF456,2,Pizza,30,31,150
+GHI789,3,Sushi,45,41,200
+JKL012,4,Tacos,25,26,120
+MNO345,5,Pasta,35,38,180
+PQR678,6,Ensalada,15,10,80
+STU901,7,Sándwich,20,25,100
+VWX234,8,Hot dog,15,20,80
+YZA567,9,Pollo asado,40,30,220
+BCD890,10,Empanadas,30,30,150
+EFG123,11,Arroz con pollo,35,35,180
+HIJ456,12,Sopa,25,27,120
+KLM789,13,Parrillada,50,54,250
+NOP012,14,Tarta,30,29,150
+QRS345,15,Paella,45,48,200
+ABC123,16,Hamburguesa,20,19,100
+DEF456,17,Pizza,30,34,150
+GHI789,18,Sushi,45,50,200
+JKL012,19,Tacos,25,29,120
+MNO345,20,Pasta,35,37,180
+PQR678,21,Ensalada,15,20,80
+STU901,22,Sándwich,20,15,100
+VWX234,23,Hot dog,15,15,80
+YZA567,24,Pollo asado,40,31,220
+BCD890,25,Empanadas,30,27,150
+EFG123,26,Arroz con pollo,35,35,180
+HIJ456,27,Sopa,25,20,120
+KLM789,28,Parrillada,50,49,250
+NOP012,29,Tarta,30,26,150
+QRS345,30,Paella,45,46,200
