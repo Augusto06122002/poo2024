@@ -23,20 +23,40 @@ if __name__ == '__main__':
     while op!=0:
         if op == 1:
             moto = gestor_motos()
-            moto.test()
+            moto.testMotos()
             print(f'Se realizo la lectura de los datosmotos.csv')
         elif op == 2:
             pedido =gestor_pedidos()
-            pedido.test()
-            print(f'Se realizo la lectura de los datospedidos.csv')
+            pedido.testPedidos()
+            pedido.ordena_pedidos()
+            print(f'Se realizo la lectura y se ordenaron lo pedidos ascendentemente de los datospedidos.csv')
         elif op == 3:
+            pedido = gestor_pedidos()
             pedido.carga_nuevos_pedidos()
         elif op == 4:
             p=input("ingrese patente del conductor")
+            pedido = gestor_pedidos() 
             moto=gestor_motos()
             if(moto.muestra_conductor(p)!=None):
                 pedido.tiempo_promedio_real(p)
+            else:
+                print("La moto no se encontro")
         op=opcion()
+        
+        
+        """Lote de prueba
+1
+2
+3
+31
+asado
+20
+30
+560
+BCD890
+4
+BCD890
+        """
 
 
         
