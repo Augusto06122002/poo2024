@@ -1,6 +1,7 @@
 
 import csv
 from ClaseMoto import ClaseMoto
+from gestor_pedidos import gestor_pedidos
 class gestor_motos:
     __ListaMotos:list
     def __init__(self):
@@ -29,7 +30,7 @@ class gestor_motos:
         result = None
         i=0
         while(i<len(self.__ListaMotos) and band):
-            if(self.__ListaMotos[i].obtenterPatente()==patente):
+            if(self.__ListaMotos[i].obtenerPatente()==patente):
                 band = False
                 result = i
             else:
@@ -38,9 +39,18 @@ class gestor_motos:
     def muestra_conductor(self,p):
         i=self.valida_moto(p)
         if(i!=None):
-            print(f" los datos del coductor son: {self.__ListaMotos[i].obtenerNyA()}")
+            print(f" ---los datos del coductor son:---")
+            print(f"Nombre: {self.__ListaMotos[i].obtenerNyA()}")
+            print(f"kms de la moto: {self.__ListaMotos[i].get_kms()}" )
+            print(f"Marca de la moto: {self.__ListaMotos[i].getMarca()}" )
+            
         return i
-
-
+    def genera_listado(self,pedido):
+        for i in range(len(self.__ListaMotos)):
+            print(f"Patente: {self.__ListaMotos[i].obtenerPatente()}")
+            print(f"Conductor: {self.__ListaMotos[i].obtenerNyA()}")
+            print("identificador del pedido    tiempo esperado   tiempo real     precio")
+            pedido.recorre_pedidos(self.__ListaMotos[i].obtenerPatente())
+            
             
         

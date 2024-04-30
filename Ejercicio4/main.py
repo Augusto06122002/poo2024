@@ -12,40 +12,47 @@ cargarlos en el Gestor de Pedidos.
 solicitar la patente de la moto para asignarla, validar que la moto existe.
 4. Leer por una patente de una moto, mostrar los datos del conductor y el tiempo promedio
 real de entrega de los pedidos que hizo.
-5. Generar un listado para cada moto, para el pago de comisiones a los conductores de las
+5. Leer por teclado número de patente, identificador de pedido, y tiempo real de entrega,
+modificar en el Gestor de Pedidos, el tiempo real de entrega para ese pedido.
+6. Generar un listado para cada moto, para el pago de comisiones a los conductores de las
 motos: 
 0 para salir del sistema
 -Ingrese:  """))
     return opc
 
 if __name__ == '__main__':
+    moto = gestor_motos()
+    moto.testMotos()
+    pedido =gestor_pedidos()
+    pedido.testPedidos()
     op=opcion()
+    print(f'Se realizo la lectura de los datosmotos.csv')
     while op!=0:
         if op == 1:
-            moto = gestor_motos()
-            moto.testMotos()
-            print(f'Se realizo la lectura de los datosmotos.csv')
+            pass
         elif op == 2:
-            pedido =gestor_pedidos()
-            pedido.testPedidos()
             pedido.ordena_pedidos()
-            print(f'Se realizo la lectura y se ordenaron lo pedidos ascendentemente de los datospedidos.csv')
+            print(f'Se ordenaron lo pedidos ascendentemente de los datospedidos.csv')
         elif op == 3:
-            pedido = gestor_pedidos()
-            pedido.carga_nuevos_pedidos()
+            pedido.carga_nuevos_pedidos(moto)
         elif op == 4:
             p=input("ingrese patente del conductor")
-            pedido = gestor_pedidos() 
-            moto=gestor_motos()
             if(moto.muestra_conductor(p)!=None):
                 pedido.tiempo_promedio_real(p)
             else:
                 print("La moto no se encontro")
+        elif op ==5:
+            patente=(input("Ingrese la patente del conductor"))
+            id=int(input("Ingrese el identificador del pedido"))
+            tr=int(input("Ingrese el tiempo real por el cual se modificara"))
+            pedido.modifica_tiempo_real(patente,id,tr,moto)
+        elif op ==6:
+            moto.genera_listado(pedido)
         op=opcion()
         
         
         """Lote de prueba
-1
+3
 2
 3
 31
@@ -56,6 +63,10 @@ asado
 BCD890
 4
 BCD890
+4
+ABC123
+16
+100
         """
 
 

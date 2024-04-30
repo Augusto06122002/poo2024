@@ -17,8 +17,6 @@ class ClasePedido:
         return self.__tiempo_real
     def obtener_Patente_Asignada(self):
         return self.__patente_asignada
-    def obtener_tiempoReal(self):
-        return self.__tiempo_real
     def obtener_identificador(self):
         return self.__identificador
     def obtener_comidas_pedidas(self):
@@ -27,6 +25,8 @@ class ClasePedido:
         return self.__tiempo_estimado
     def obtener_precio(self):
         return self.__precio
+    def modifica_tr(self,tr):
+        self.__tiempo_real = tr
     def __lt__(self, otro):
         return self.obtener_Patente_Asignada() < otro.obtener_Patente_Asignada()
         

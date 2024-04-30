@@ -12,3 +12,7 @@ class ClaseMoto:
         return self.__patente
     def obtenerNyA(self):
         return self.__NyA
+    def get_kms(self):
+        return self.__kilometraje
+    def getMarca(self):
+        return self.__marca
