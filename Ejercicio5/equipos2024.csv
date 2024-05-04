@@ -1,0 +1,4 @@
+identificadordelequipo,nombredelequipo,golesafavor,golesencontra,diferenciadegoles,puntos
+1,EquipoA,5,2,3,30
+2,EquipoB,3,4,-1,30
+3,EquipoC,4,3,1,33
