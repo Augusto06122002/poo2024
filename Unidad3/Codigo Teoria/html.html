@@ -1,0 +1,37 @@
+<!DOCTYPE html>#Se puede obviar(indica que se va a tratar de un documento html  )
+<html>#Etiqueta de inicio de la aplicacion
+    <head>#encabezado  
+        <title>Flask</title>#titulo que va tener la barra del url
+    </head>
+    <body>#contenido de la pagina(lo que se va ver)
+        <h1>Mi primera aplicación Flask</h1>#Hay 6 niveles de h el h1 es un titulo grande,
+        <p>Esto es una página web</p>#indica el parrafo
+    </body>
+</html> #Etiqueta de finalizacion de la pagina
+
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Crear Usuario</title>
+ <link rel="stylesheet" href="{{url_for('static', filename=
+'css/estilos.css')}}">#Incrusto el css en el html
+ </head>
+ <body>
+ <h1>Nuevo Usuario</h1>
+ <form action = "http://localhost:5000/bienvenida" method = "post"
+class= "container">
+ <label for = "nombre" >Nombre</label><br>
+ <input type = "text" name = "nombre" placeholder = "Nombre" /><br>
+
+ <label for = "email">Correo Electrónico</label><br>
+ <input type = "text" name = "email" placeholder = "email" /><br>
+
+ <label for = "password">Contraseña</label><br>
+ <input type = "password" name = "password" placeholder =
+"password"/><br>
+ <br>
+ <input type = "submit" value = "Guardar" />
+ <br><br>
+ </form>
+ </body>
+</html>
