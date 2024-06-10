@@ -1,0 +1,24 @@
+{% extends "base_template.html" %}
+
+{% block title %}Registrar Salida de Transporte{% endblock %}
+
+{% block content %}
+<h2>Registrar Salida de Transporte</h2>
+<form action="{{ url_for('registrar_salida_transporte') }}" method="post">
+    <label for="sucursal_destino">Sucursal Destino:</label>
+    <select id="sucursal_destino" name="sucursal_destino">
+        {% for sucursal in sucursales %}
+            <option value="{{ sucursal.id }}">{{ sucursal.numero }} - {{ sucursal.provincia }} - {{ sucursal.localidad }}</option>
+        {% endfor %}
+    </select><br>
+    
+    <label for="paquetes">Seleccionar Paquetes:</label>
+    <select id="paquetes" name="paquetes" multiple>
+        {% for paquete in paquetes %}
+            <option value="{{ paquete.id }}">{{ paquete.numeroEnvio }} - {{ paquete.dir_destinatario }}</option>
+        {% endfor %}
+    </select><br>
+    
+    <button type="submit">Registrar Salida</button>
+</form>
+{% endblock %}

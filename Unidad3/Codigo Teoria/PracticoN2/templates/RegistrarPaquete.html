@@ -1,0 +1,26 @@
+{% extends "base_template.html" %}
+
+{% block title %}Registrar Paquete{% endblock %}
+
+{% block content %}
+<h2>Registrar Paquete</h2>
+<form action="{{ url_for('registrar_paquete') }}" method="post">
+    <label for="peso">Peso del Paquete:</label>
+    <input type="number" id="peso" name="peso" step="0.01" required><br>
+    
+    <label for="nombre_destinatario">Nombre del Destinatario:</label>
+    <input type="text" id="nombre_destinatario" name="nombre_destinatario" required><br>
+    
+    <label for="dir_destinatario">Dirección del Destinatario:</label>
+    <input type="text" id="dir_destinatario" name="dir_destinatario" required><br>
+    
+    <label for="sucursal_destino">Sucursal Destino:</label>
+    <select id="sucursal_destino" name="sucursal_destino">
+        {% for sucursal in sucursales %}
+            <option value="{{ sucursal.id }}">{{ sucursal.numero }} - {{ sucursal.provincia }} - {{ sucursal.localidad }}</option>
+        {% endfor %}
+    </select><br>
+    
+    <button type="submit">Registrar Paquete</button>
+</form>
+{% endblock %}
