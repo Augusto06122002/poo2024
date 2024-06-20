@@ -1,0 +1,16 @@
+{% extends "base_template.html" %}
+
+{% block title %}Funciones Despachador{% endblock %}
+
+{% block content %}
+<h1>SucursalNro: {{sucursal_numero}}</h1> 
+<h1>Direccion : {{sucursal_direccion}}</h1>
+<nav>
+    <ul>
+        <li><a href="{{ url_for('registrar_paquete') }}">Registrar Paquete</a></li>
+        <li><a href="{{ url_for('RegistrarSalidaTransporte') }}">Registrar Salida de Transporte</a></li>
+        <li><a href="{{ url_for('LLegada_transporte') }}">Registrar Llegada de Transporte</a></li>
+    </ul>
+</nav>
+<p>Seleccione una opcion:</p>
+{% endblock %}

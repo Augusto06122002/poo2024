@@ -1,0 +1,17 @@
+{% extends "base_template.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+    <h2>No se pudo realizar con exito el registro de la llegada transporte.</h2>
+
+    <ul>
+    {% for mensaje in mensajes %}
+        <li>{{ mensaje }}</li>
+    {% endfor %}
+    </ul>
+
+    <p>Por favor,seleccione <a href="{{ url_for('LLegada_Transporte') }}">volver</a> para volver a la página de registro transporte.</p>
+
+{% endblock %}

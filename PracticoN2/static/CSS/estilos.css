@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #464;
+  background-color: #f0f0f0; /* Cambiar el color de fondo */
+}
+
+header {
+  background-color: #DFB887;
+  height: 10%;
+  width: 100%;
+  opacity: .9;
+  display: flex; /* Alinear elementos horizontalmente */
+  justify-content: flex-start; /* Alinear elementos a la izquierda */
+  align-items: center; /* Centrar verticalmente */
+  padding-left: 20px; /* Ajustar espacio a la izquierda */
+  margin-bottom: 20px; /* Aumentar el margen inferior */
+}
+
+h1 { 
+  font-family: serif; 
+  color: #377ba8; 
+  margin-right: auto; /* Empujar a la derecha */
+}
+
+.menu {
+  margin-left: auto; /* Empujar a la derecha */
+}
+
+h2 {
+  font-size: 3em;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: -2px;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #76CADC;
+  padding: 20px; /* Añadir relleno */
+}
+
+.container label { 
+  font-weight: bold; 
+  margin-bottom: 1em; /* Reducir el espacio inferior */
+  color: #123A42;
+}
+
+.container input,
+.container button,
+.container textarea,
+.container select {
+  margin-bottom: 1em; 
+}
+
+.container textarea { 
+  min-height: 12em; 
+  resize: vertical; 
+}
+
+button {
+  margin: 0 10px; /* Espaciado entre los botones */
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #464;
+}

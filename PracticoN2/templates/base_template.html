@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}LogiPack{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>LogiPack</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 LogiPack </p>
+        <button onclick="window.history.back()">Atrás</button>
+        <button onclick="window.history.forward()">Adelante</button>
+    </footer>
+</body>
+</html>

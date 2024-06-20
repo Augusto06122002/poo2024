@@ -1,0 +1,17 @@
+{% extends "base_template.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+    <h2>El paquete no se registró con éxito.</h2>
+
+    <ul>
+    {% for mensaje in mensajes %}
+        <li>{{ mensaje }}</li>
+    {% endfor %}
+    </ul>
+
+    <p>Por favor, <a href="{{ url_for('registrar_paquete') }}">volver</a> para volver a la página de registro de paquete.</p>
+
+{% endblock %}

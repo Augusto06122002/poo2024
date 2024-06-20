@@ -1,0 +1,20 @@
+{% extends "base_template.html" %}
+
+{% block title %}Registrar Salida de Transporte{% endblock %}
+
+{% block content %}
+<h2>Registrar Salida de Transporte</h2>
+<form action="{{ url_for('RegistrarSalidaTransporte') }}" method="post">
+    <label for="sucursal-select">Sucursal Destino:</label>
+    <select id="sucursal-select" name="sucursal_destino" required>
+        <option value="" disabled selected>Seleccione una sucursal Destino</option>
+        {% for sucursal in sucursales %}
+            <option value="{{ sucursal.id }}">
+                Número: {{ sucursal.numero }} - Provincia: {{ sucursal.provincia }} - Localidad: {{ sucursal.localidad }}
+            </option>
+        {% endfor %}
+    </select>
+    <br>
+    <input type="submit" value="Aceptar">
+</form>
+{% endblock %}
