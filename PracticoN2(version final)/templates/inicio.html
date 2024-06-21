@@ -1,0 +1,18 @@
+{% extends "base_template.html" %}
+
+{% block title %}Seleccione funcion{% endblock %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despachador y Repartidor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <div class="button-container">
+        <button class="despachador" onclick="window.location.href='{{ url_for('lista_sucursales') }}'">Despachador</button>
+        <button class="repartidor" onclick="window.location.href='{{ url_for('FuncionesDelRepartidor') }}'">Repartidor</button>
+    </div>
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends "base_template.html" %}
+
+{% block title %}Se registro la llegada del transporte{% endblock %}
+
+{% block content %}
+<h2>Se registro con exito la llegada del transporte a la sucursal</h2>
+<h5>{{ mensaje }} 
+    numero: {{ sucursal.numero }} 
+    direccion: {{sucursal.direccion}}
+</h5>
+<div class="myDiv">
+    <br><br><a href="{{ url_for('FuncionesDelDespachador') }}">Volver a las Funciones</a><br><br>
+</div>
+{% endblock %}

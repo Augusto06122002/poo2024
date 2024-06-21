@@ -1,0 +1,39 @@
+{% extends "base_template.html" %}
+
+{% block title %}
+    <title>Registrar Transporte de Paquetes</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Mostrar el mensaje -->
+    {% if mensaje %}
+        <div class="alert alert-info" role="alert">
+            {{ mensaje }}
+        </div>
+    {% endif %}
+    <h2>Paquetes No Entregados y Sin Repartidor Asignado</h2>
+    <form action="{{ url_for('salida_transporte') }}" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th>Seleccionar</th>
+                    <th>Número de Envío</th>
+                    <th>Dirección del Destinatario</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for paquete in paquetes %}
+                    <tr>
+                        <td><input type="checkbox" name="paquetes_seleccionados" value="{{ paquete.numeroEnvio }}"></td>
+                        <td>{{ paquete.numeroEnvio }}</td>
+                        <td>{{ paquete.dirdestinatario }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <button type="submit">Registrar Transporte</button>
+    </form>
+</div>
+{% endblock %}

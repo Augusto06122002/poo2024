@@ -1,0 +1,30 @@
+{% extends "base_template.html" %}
+
+{% block title %}Listado de Sucursales{% endblock %}
+
+{% block content %}
+<h2>Listado de Sucursales</h2>
+<form action="{{ url_for('lista_sucursales') }}" method="post">
+    <label for="sucursal-select">Seleccione una sucursal:</label>
+    <select id="sucursal-select" name="sucursal_numero" required>
+        <option value="" disabled selected>Seleccione una sucursal</option>
+        {% for sucursal in sucursales %}
+            <option value="{{ sucursal.numero }}">
+                Número: {{ sucursal.numero }} - Provincia: {{ sucursal.provincia }} - Localidad: {{ sucursal.localidad }}
+            </option>
+        {% endfor %}
+    </select>
+    <br>
+    <input type="submit" value="Aceptar">
+</form>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class="flashes">
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+{% endblock %}
