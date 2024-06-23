@@ -1,0 +1,22 @@
+{
+    "__class__": "GestorJugadores",
+    "jugadores": [
+        {
+            "__class__": "jugador",
+            "__atributos__": {
+                "puntaje": 5,
+                "nombre": "Jugador2",
+                "fecha_hora": "2024-06-23 19:02:35"
+            }
+        },
+        
+        {
+            "__class__": "jugador",
+            "__atributos__": {
+                "puntaje": 1,
+                "nombre": "Jugador1",
+                "fecha_hora": "2024-06-23 19:02:35"
+            }
+        }
+    ]
+}
